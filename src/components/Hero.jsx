@@ -5,9 +5,9 @@ const Hero = () => {
     <div className='flex sm:m-4 sm:flex-row flex-col mb-5'>
       <div className='sm:w-[50%] w-full flex justify-center items-center'>
         <div className='shadow-xl rounded-xl p-4 w-full text-center bg-slate-100'>
-          <h1 className='cursor-pointer font-bold text-3xl sm:text-5xl bg-transparent bg-gradient-to-r from-blue-700 to-green-700 uppercase tracking-tight text-transparent bg-clip-text'>I`m Fahad Khan</h1>
+          <h1 className='cursor-pointer font-bold text-3xl sm:text-5xl bg-transparent bg-gradient-to-r from-blue-700 to-green-700 uppercase tracking-tight text-transparent bg-clip-text'>I am Fahad Khan</h1>
           <p className='sm:pl-2 pt-2 text-xl sm:pt-6 font-semibold'>
-            <ReactTyped strings={["MERN Stack developer based in <strong>Bahawalpur</strong>","Available for Freelancing","Build fully Responsive and attractive websites"]} typeSpeed={80} backDelay={3000} loop={true}></ReactTyped>
+            <ReactTyped strings={["MERN Stack developer based in <strong>Bahawalpur</strong>","Available for work","Build fully Responsive and attractive websites"]} typeSpeed={80} backDelay={3000} loop={true}></ReactTyped>
           </p>
         </div>
       </div>
