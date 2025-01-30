@@ -6,7 +6,7 @@ const Footer = () => {
       <hr className="my-5" />
       <div className="flex sm:flex-row flex-col px-10">
         <div className="w-full sm:w-[50%]">
-          <h1 className="text-2xl"><b className="text-orange-500">F</b>ahad <b className="text-orange-500">K</b>han</h1>
+          <h1 className="text-2xl font-semibold"><b className="text-orange-500">F</b>ahad <b className="text-orange-500">K</b>han</h1>
           <p className="sm:w-[70%] w-full">I am MERN STACK DEVELOPER looking forward to work with you </p>
         </div>
         <div className="w-full flex gap-3 flex-col mt-5 sm:w-[50%]">
