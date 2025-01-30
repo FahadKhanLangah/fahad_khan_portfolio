@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import MyProjects from "./components/MyProjects"
 import Navbar from "./components/Navbar"
@@ -13,6 +14,7 @@ function App() {
       <Skills></Skills>
       <Services></Services>
       <MyProjects></MyProjects>
+      <Footer></Footer>
     </>
   )
 }

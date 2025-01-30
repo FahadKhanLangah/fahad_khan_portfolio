@@ -3,7 +3,7 @@ import { SiCodementor } from "react-icons/si";
 import { LiaCodeSolid } from "react-icons/lia";
 const Services = () => {
   return (
-    <div className="my-5 mx-2">
+    <div id="services" className="my-5 mx-2">
       <h1 className='mb-6 px-4 py-1 text-3xl text-white font-bold
       shadow-xl w-full bg-slate-500
       '>My Services</h1>

@@ -10,7 +10,7 @@ import { FaJava } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 const Skills = () => {
   return (
-    <div className='my-2'>
+    <div id="skills" className='my-2'>
       <h1 className='bg-green-700 mb-6 px-4 py-1 text-3xl text-white font-bold'>Technologies Known</h1>
       <div className='gap-4 flex flex-wrap items-center justify-center'>
         <div className='hover:border-slate-800 cursor-pointer h-32 w-32 sm:w-40 bg-slate-300 shadow-lg border-2 flex flex-col items-center rounded-xl justify-center'>
