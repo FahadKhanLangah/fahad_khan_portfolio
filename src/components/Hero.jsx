@@ -33,7 +33,7 @@ const Hero = () => {
             >
               <button
                 onClick={() => setIsOpen(false)}
-                className="bg-black text-white px-5 py-3 absolute top-80 right-3 hover:bg-red-600 sm:right-[22rem] font-semibold sm:top-2">Close</button>
+                className="bg-black text-white px-5 py-3 absolute top-64 rounded hover:font-bold right-3 hover:bg-red-600 sm:right-[22rem] font-semibold md:top-2">Close</button>
               <img src={fahadPic} alt="Fullscreen" className="max-w-full max-h-full" />
             </div>
           )}
