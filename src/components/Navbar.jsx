@@ -1,6 +1,6 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <div id='home' className="bg-black sm:h-16 flex flex-col sm:flex-row text-white">
       <div className="flex sm:w-[60%] items-center sm:ml-20 w-full justify-between p-2 font-bold ">
