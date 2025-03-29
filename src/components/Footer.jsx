@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="w-full flex gap-3 flex-col mt-5 sm:w-[50%]">
           <h1 className="text-gray-500 font-medium">Click on whatsapp icon to chat with me</h1>
           <div className="flex gap-5">
-            <span className="sm:text-4xl text-2xl">
+            <span className="sm:text-4xl text-red-700 text-2xl">
               <MdEmail></MdEmail>
             </span>
             <h1 className="sm:text-3xl text-xl font-semibold underline">

@@ -2,19 +2,13 @@
 import { socialProfileData } from "../Data/social-profile";
 const SocialPrfiles = () => {
   const openLink = (title, link) => {
+    if (title === "E-mail") {
+      window.location.href = `mailto:${link}`;
+    } 
     if (!link.startsWith("http")) {
-      link = `https://${link}`; // Ensures the URL is absolute
-    }
-    if (title === "Whatsapp") {
-      window.open(link, "_blank")
+      link = `https://${link}`; 
     }
     window.open(link, "_blank");
-    if (title === "LinkedIn") {
-      window.open(link, "_blank")
-    }
-    if (title === "Github") {
-      window.open(link, "_blank")
-    }
   }
   return (
     <div className="mx-4 py-2">

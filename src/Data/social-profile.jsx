@@ -1,5 +1,6 @@
 import { BsWhatsapp } from "react-icons/bs";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 
 export const socialProfileData = [
@@ -21,4 +22,11 @@ export const socialProfileData = [
     profileLink : "https://github.com/FahadKhanLangah",
     color : "text-black"
   },
+  {
+    title : "E-mail",
+    icon : <MdEmail/>,
+    profileLink : "fahadkhanavoid@gmail.com",
+    color : "text-red-700"
+  },
 ]
+//<MdEmail></MdEmail>
