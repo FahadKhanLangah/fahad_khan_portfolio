@@ -73,12 +73,13 @@ const Skills = () => {
             </span>
             <h1 className='font-bold text-lg sm:text-xl'>JAVA</h1>
           </div>
-          <div className='hover:border-slate-800 cursor-pointer h-32 w-32 sm:w-40 bg-slate-300 shadow-lg border-2 flex flex-col items-center rounded-xl justify-center'>
+          <a href="https://github.com/FahadKhanLangah"><div className='hover:border-slate-800 cursor-pointer h-32 w-32 sm:w-40 bg-slate-300 shadow-lg border-2 flex flex-col items-center rounded-xl justify-center'>
             <span className="text-6xl text-black">
               <FaGithubSquare></FaGithubSquare>
             </span>
             <h1 className='font-bold text-lg sm:text-xl'>GITHUB</h1>
           </div>
+          </a>
         </ul>
       </div>
     </div>
