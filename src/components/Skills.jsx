@@ -5,9 +5,7 @@ import { FaNode } from "react-icons/fa6";
 import { DiMongodb } from "react-icons/di";
 import { SiMysql } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaPython } from "react-icons/fa";
-import { FaJava } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
+
 const Skills = () => {
   return (
     <div id="skills" className='my-2'>
@@ -57,31 +55,7 @@ const Skills = () => {
         </div>
       </div>
       <hr className="my-2" />
-      <div className="mx-4 py-2">
-        <h1 className="font-bold text-3xl">Extra Knowldge</h1>
-        <hr className="my-2" />
-        <ul className='gap-4 flex flex-wrap items-center justify-center'>
-          <div className='hover:border-slate-800 cursor-pointer h-32 w-32 sm:w-40 bg-slate-300 shadow-lg border-2 flex flex-col items-center rounded-xl justify-center'>
-            <span className="text-6xl text-yellow-500 bg-transparent bg-gradient-to-r from-blue-600 to-yellow-500 text-transparent bg-clip-text">
-              <FaPython></FaPython>
-            </span>
-            <h1 className='font-bold text-lg sm:text-xl'>Pyhton</h1>
-          </div>
-          <div className='hover:border-slate-800 cursor-pointer h-32 w-32 sm:w-40 bg-slate-300 shadow-lg border-2 flex flex-col items-center rounded-xl justify-center'>
-            <span className="text-6xl text-red-600">
-              <FaJava></FaJava>
-            </span>
-            <h1 className='font-bold text-lg sm:text-xl'>JAVA</h1>
-          </div>
-          <a href="https://github.com/FahadKhanLangah"><div className='hover:border-slate-800 cursor-pointer h-32 w-32 sm:w-40 bg-slate-300 shadow-lg border-2 flex flex-col items-center rounded-xl justify-center'>
-            <span className="text-6xl text-black">
-              <FaGithubSquare></FaGithubSquare>
-            </span>
-            <h1 className='font-bold text-lg sm:text-xl'>GITHUB</h1>
-          </div>
-          </a>
-        </ul>
-      </div>
+      
     </div>
   )
 }
