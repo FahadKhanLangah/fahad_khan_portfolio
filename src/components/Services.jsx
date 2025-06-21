@@ -1,46 +1,193 @@
-import { skillData } from "../Data/skill-data"
+import { motion } from "framer-motion";
+import { FaLaptopCode, FaMobileAlt, FaServer, FaPalette, FaCode } from "react-icons/fa";
 
 const Services = () => {
+  const services = [
+    {
+      icon: <FaLaptopCode className="text-4xl" />,
+      title: "Full Stack Development",
+      description: "End-to-end web applications with modern frameworks like React, Node.js, and Express",
+      color: "from-blue-600 to-blue-800"
+    },
+    {
+      icon: <FaMobileAlt className="text-4xl" />,
+      title: "Mobile App Development",
+      description: "Cross-platform mobile apps with Flutter for iOS and Android",
+      color: "from-green-500 to-green-700"
+    },
+    {
+      icon: <FaServer className="text-4xl" />,
+      title: "Backend Development",
+      description: "Robust API development, database design, and server management",
+      color: "from-purple-500 to-purple-700"
+    },
+    {
+      icon: <FaPalette className="text-4xl" />,
+      title: "UI/UX Design",
+      description: "User-centered designs with intuitive interfaces and engaging experiences",
+      color: "from-pink-500 to-pink-700"
+    },
+    {
+      icon: <FaCode className="text-4xl" />,
+      title: "Frontend Development",
+      description: "Responsive, accessible interfaces with React and modern CSS frameworks",
+      color: "from-cyan-500 to-cyan-700"
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut" }
+    },
+    hover: {
+      y: -10,
+      boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+      transition: { duration: 0.3 }
+    }
+  };
+
   return (
-    <div id="services" className="my-5 mx-2">
-      <h1 className='mb-6 px-4 py-1 text-3xl text-white font-bold
-      shadow-xl w-full bg-slate-500
-      '>My Expertise</h1>
-      <div className="flex justify-center sm:flex-row text-orange-600 flex-col gap-10 sm:gap-6 items-center">
-        {skillData.map((v, i) =>
-          <div key={i}
-            style={{ backgroundImage: `url(${v.bg})` }}
-            className="transition-all relative hover:scale-110 bg-cover bg-center cursor-pointer h-40 w-60 shadow-lg border-2 flex flex-col items-center rounded-xl justify-center overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-70 transition-all duration-300"></div>
-            <span className="relative text-6xl text-white">
-              {v.icon}
-            </span>
-            <h1 className="font-bold text-lg sm:text-xl bg-blue-700 text-white absolute w-full px-1 bottom-1 z-10">
-              {v.title}
-            </h1>
-          </div>
-
-        )}
-      </div>
-    </div>
-  )
-}
-
-export default Services
-
-/*
-<div
-          style={{ backgroundImage: `url(${fullstack})` }}
-          className="transition-all relative hover:scale-110 bg-cover bg-center cursor-pointer h-40 w-60 shadow-lg border-2 flex flex-col items-center rounded-xl justify-center overflow-hidden"
+    <section id="services" className="py-16 px-4 sm:px-8 bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
         >
-          <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300"></div>
-          <span className="relative text-6xl text-white">
-            <FaLaptopCode />
-          </span>
-          <h1 className="font-bold text-lg sm:text-xl bg-blue-700 text-white absolute w-full px-1 bottom-1 z-10">
-            Full Stack Development
-          </h1>
-        </div>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text inline-block">
+            My Expertise
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            I provide comprehensive solutions that cover the entire development lifecycle, from design to deployment.
+          </p>
+        </motion.div>
 
-*/
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              whileHover="hover"
+              className="group"
+            >
+              <div className={`h-full bg-gradient-to-br ${service.color} rounded-2xl overflow-hidden shadow-xl transition-all duration-300`}>
+                <div className="p-8 h-full flex flex-col">
+                  <div className="mb-6 text-white">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-100 opacity-90 mb-6">{service.description}</p>
+                  
+                  <div className="mt-auto">
+                    <div className="flex flex-wrap gap-2">
+                      {index === 0 && (
+                        <>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">React</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Node.js</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Express</span>
+                        </>
+                      )}
+                      {index === 1 && (
+                        <>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Flutter</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Dart</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Firebase</span>
+                        </>
+                      )}
+                      {index === 2 && (
+                        <>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">MongoDB</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">MySQL</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">REST API</span>
+                        </>
+                      )}
+                      {index === 3 && (
+                        <>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Figma</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Adobe XD</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">User Research</span>
+                        </>
+                      )}
+                      {index === 4 && (
+                        <>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Responsive</span>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div 
+          className="mt-16 bg-gradient-to-r from-gray-800 to-black dark:from-gray-900 dark:to-black rounded-2xl p-8 text-white shadow-xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-6 md:mb-0 md:mr-8">
+              <h3 className="text-2xl font-bold mb-2">My Development Process</h3>
+              <p className="opacity-80">
+                I follow an agile approach to deliver high-quality solutions on time and within budget.
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mb-2">
+                  <span className="font-bold">1</span>
+                </div>
+                <div>Discovery</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mb-2">
+                  <span className="font-bold">2</span>
+                </div>
+                <div>Design</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mb-2">
+                  <span className="font-bold">3</span>
+                </div>
+                <div>Development</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mb-2">
+                  <span className="font-bold">4</span>
+                </div>
+                <div>Deployment</div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;

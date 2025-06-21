@@ -1,50 +1,129 @@
 import { ReactTyped } from "react-typed";
-import fahadPic from '../assets/Fahad.jpg'
-import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import fahdimg from '../assets/Fahad.jpg'
 const Hero = () => {
-  const imgRef = useRef(null);
-  const downloadImage = () => {
-    const imgSrc = imgRef.current.src;
-    const link = document.createElement('a');
-    link.href = imgSrc;
-    link.download = "fahad_khan_portfolio_img.jpg";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-  const [isOpen, setIsOpen] = useState(false);
+  // Typed strings optimized for client-focused messaging
+  const typedStrings = [
+    "Building high-performance web & mobile solutions",
+    "Full-stack developer specializing in MERN & Flutter",
+    "Creating digital experiences that drive business results",
+    "Available for freelance projects and full-time roles"
+  ];
+
   return (
-    <div className='flex sm:m-4 sm:flex-row flex-col mb-5'>
-      <div className='sm:w-[50%] w-full flex justify-center items-center'>
-        <div className='shadow-xl rounded-xl p-4 w-full text-center bg-slate-100'>
-          <h1 className='cursor-pointer font-bold text-3xl sm:text-5xl bg-transparent bg-gradient-to-r from-blue-700 to-green-700 uppercase tracking-tight text-transparent bg-clip-text'>I am Fahad Khan</h1>
-          <p className='sm:pl-2 pt-2 text-xl sm:pt-6 font-semibold'>
-            <ReactTyped strings={["MERN Stack developer based in <strong>Bahawalpur</strong>", "Available for work", "Build fully Responsive and attractive websites"]} typeSpeed={80} backDelay={3000} loop={true}></ReactTyped>
-          </p>
-        </div>
-      </div>
-      <div className='sm:w-[50%] w-full flex justify-center items-center'>
-        <div className=''>
-          <img onClick={() => setIsOpen(true)} ref={imgRef} className='cursor-pointer hover:scale-125 border-2 hover:border-blue-500 duration-500 h-60 w-60 shadow-2xl rounded-full mt-10' src={fahadPic} alt="Fahad Khan Profile pic" />
-
-          {isOpen && (
-            <div
-              className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
-            >
-              <button
-                onClick={() => setIsOpen(false)}
-                className="bg-black text-white px-5 py-3 absolute top-64 rounded hover:font-bold right-3 hover:bg-red-600 sm:right-[22rem] font-semibold md:top-2">Close</button>
-              <img src={fahadPic} alt="Fullscreen" className="max-w-full max-h-full" />
-            </div>
-          )}
-
-          <div className='mt-10'>
-            <button onClick={downloadImage} className={`bg-blue-600 rounded-sm font-semibold px-4 py-2 text-white hover:bg-orange-500 ml-10`}>Download Image</button>
+    <section 
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-16 px-4 py-12 md:py-24"
+      id="home"
+    >
+      {/* Text Content - Left Column */}
+      <motion.div
+        className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text mb-4">
+            Fahad Khan
+          </h1>
+          
+          <h2 className="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
+            Full Stack & Flutter Developer
+          </h2>
+          
+          <div className="h-20 md:h-24 flex items-center justify-center md:justify-start mb-6">
+            <p className="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-400">
+              <ReactTyped
+                strings={typedStrings}
+                typeSpeed={50}
+                backSpeed={30}
+                backDelay={1500}
+                loop
+                showCursor
+                cursorChar="|"
+              />
+            </p>
           </div>
-        </div>
-      </div>
-    </div>
-  )
-}
+        </motion.div>
 
-export default Hero
+        {/* CTA Buttons */}
+        <motion.div 
+          className="flex flex-wrap gap-4 justify-center mt-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <motion.a
+            href="#projects"
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            View Projects
+          </motion.a>
+          
+          
+      <motion.a
+            href="#contact"
+            className="px-6 py-3 bg-white dark:bg-gray-800 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-700 font-semibold rounded-lg shadow-lg transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Hire Me
+          </motion.a>
+        </motion.div>
+      </motion.div>
+
+      {/* Profile Image - Right Column */}
+      <motion.div
+        className="relative md:w-1/3 flex justify-center"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full blur-xl opacity-75 animate-pulse"></div>
+          
+          <motion.div
+            className="relative border-4 border-white dark:border-gray-800 rounded-full overflow-hidden shadow-2xl"
+            initial={{ rotate: -5 }}
+            animate={{ rotate: 5 }}
+            transition={{ 
+              duration: 4,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            }}
+          >
+            <img className="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 md:w-80 md:h-80" src={fahdimg} alt="fahad-khan-portfolio" />
+          </motion.div>
+          
+          {/* Flutter & Web Badges */}
+          <motion.div
+            className="absolute -bottom-4 -right-4 bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.6 }}
+          >
+            Flutter Expert
+          </motion.div>
+          
+          <motion.div
+            className="absolute -top-4 -left-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            Full Stack
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default Hero;
