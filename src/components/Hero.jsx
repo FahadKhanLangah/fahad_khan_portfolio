@@ -12,7 +12,7 @@ const Hero = () => {
 
   return (
     <section 
-      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-16 px-4 py-12 md:py-24"
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-16 px-4 dark:bg-gray-900 py-12 md:py-24"
       id="home"
     >
       {/* Text Content - Left Column */}
@@ -31,12 +31,12 @@ const Hero = () => {
             Fahad Khan
           </h1>
           
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
+          <h2 className="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-6">
             Full Stack & Flutter Developer
           </h2>
           
           <div className="h-20 md:h-24 flex items-center justify-center md:justify-start mb-6">
-            <p className="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-400">
+            <p className="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-300">
               <ReactTyped
                 strings={typedStrings}
                 typeSpeed={50}
@@ -69,7 +69,7 @@ const Hero = () => {
           
       <motion.a
             href="#contact"
-            className="px-6 py-3 bg-white dark:bg-gray-800 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-700 font-semibold rounded-lg shadow-lg transition-colors"
+            className="px-6 py-3 bg-white dark:bg-gray-900 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-700 font-semibold rounded-lg shadow-lg transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -89,7 +89,7 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full blur-xl opacity-75 animate-pulse"></div>
           
           <motion.div
-            className="relative border-4 border-white dark:border-gray-800 rounded-full overflow-hidden shadow-2xl"
+            className="relative border-4 border-white dark:border-blue-800 rounded-full overflow-hidden shadow-2xl"
             initial={{ rotate: -5 }}
             animate={{ rotate: 5 }}
             transition={{ 

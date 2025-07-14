@@ -8,7 +8,7 @@ const Footer = () => {
   };
 
   const openEmail = () => {
-    window.location.href = "mailto:fahadkhan@example.com";
+    window.location.href = "mailto:fahadkhanavoid@gmail.com";
   };
 
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           {/* Brand Column */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -29,9 +29,9 @@ const Footer = () => {
             <p className="mb-6 opacity-80">
               Full Stack Developer specializing in creating high-performance web and mobile applications with modern technologies.
             </p>
-            
+
             <div className="flex space-x-4">
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={openWhatsapp}
@@ -40,7 +40,7 @@ const Footer = () => {
               >
                 <FaWhatsapp className="text-xl" />
               </motion.button>
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={openEmail}
@@ -53,7 +53,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Navigation Links */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -62,8 +62,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {['Home', 'Skills', 'Services', 'Projects', 'Contact'].map((item, index) => (
                 <li key={index}>
-                  <a 
-                    href={`#${item.toLowerCase()}`} 
+                  <a
+                    href={`#${item.toLowerCase()}`}
                     className="opacity-80 hover:opacity-100 hover:text-orange-400 transition-all duration-300"
                   >
                     {item}
@@ -74,7 +74,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Services */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -97,7 +97,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Contact Info */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -114,7 +114,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <FaEnvelope className="text-orange-500 mt-1 mr-3" />
-                <span className="opacity-80">fahadkhan@example.com</span>
+                <span className="opacity-80">fahadkhanavoid@gmail.com</span>
               </li>
             </ul>
           </motion.div>
@@ -127,7 +127,7 @@ const Footer = () => {
                 &copy; {new Date().getFullYear()} Fahad Khan. All rights reserved.
               </p>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-6">
               {['Terms of Service', 'Privacy Policy', 'Connect with me'].map((item, index) => (
                 <motion.button
@@ -141,7 +141,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="mt-8 text-center opacity-60 text-sm">
             <p>Designed and built with ❤️ by Fahad Khan</p>
           </div>

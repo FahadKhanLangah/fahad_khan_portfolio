@@ -1,19 +1,19 @@
 import { motion } from 'framer-motion';
-import { 
-  FaGithub, FaLinkedin, FaInstagram, 
+import {
+  FaGithub, FaLinkedin, FaInstagram,
   FaFacebook, FaEnvelope,
-  FaWhatsapp, 
+  FaWhatsapp,
 } from 'react-icons/fa';
 
 const SocialProfiles = () => {
   const socialProfileData = [
     { icon: <FaGithub className="text-4xl" />, title: "GitHub", color: "from-gray-800 to-black", link: "https://github.com/FahadKhanLangah" },
-    { icon: <FaLinkedin className="text-4xl" />, title: "LinkedIn", color: "from-blue-700 to-blue-900", link: "https://linkedin.com/in/fahadkhan" },
-    { icon: <FaInstagram className="text-4xl" />, title: "Instagram", color: "from-purple-600 via-pink-600 to-red-500", link: "fahadkhanavoid@gmail.com" },
+    { icon: <FaLinkedin className="text-4xl" />, title: "LinkedIn", color: "from-blue-700 to-blue-900", link: "https://linkedin.com/in/itx_fahadkhan" },
+    // { icon: <FaInstagram className="text-4xl" />, title: "Instagram", color: "from-purple-600 via-pink-600 to-red-500", link: '#home' },
     { icon: <FaEnvelope className="text-4xl" />, title: "Email", color: "from-red-500 to-red-700", link: "mailto:fahadkhanavoid@gmail.com" },
     { icon: <FaFacebook className="text-4xl" />, title: "Facebook", color: "from-blue-600 to-blue-800", link: "https://www.facebook.com/share/1BjvASMPnR/" },
     { icon: <FaWhatsapp className="text-4xl" />, title: "WhatsApp", color: "from-green-500 to-green-700", link: "https://wa.me/+923187357005" },
-   
+
   ];
 
   const containerVariants = {
@@ -66,7 +66,7 @@ const SocialProfiles = () => {
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
           variants={containerVariants}
           initial="hidden"
@@ -93,7 +93,7 @@ const SocialProfiles = () => {
           ))}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="mt-16 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl p-8 text-white shadow-xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,8 +107,8 @@ const SocialProfiles = () => {
                 Have a project in mind? I`m available for freelance work and full-time opportunities.
               </p>
             </div>
-            <a 
-              href="mailto:fahad@example.com" 
+            <a
+              href="mailto:fahad@example.com"
               className="px-6 py-3 bg-white text-blue-600 font-bold rounded-lg shadow-lg hover:shadow-xl transition-shadow flex items-center"
             >
               <FaEnvelope className="mr-2" />
