@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import todoImg from '../assets/todo.png'
+import guldasta from '../assets/guldasta.png'
 const ProjectCard = ({ title, description, image, tags, liveLink, githubLink }) => {
   return (
     <motion.div
@@ -10,12 +11,12 @@ const ProjectCard = ({ title, description, image, tags, liveLink, githubLink }) 
       transition={{ duration: 0.3 }}
     >
       <div className="relative h-48 overflow-hidden">
-        <img 
-          src={image} 
-          alt={title} 
+        <img
+          src={image}
+          alt={title}
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/60 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
           <p className="text-white text-sm">{description}</p>
           <div className="flex flex-wrap gap-2 mt-2">
             {tags.map((tag, index) => (
@@ -26,13 +27,13 @@ const ProjectCard = ({ title, description, image, tags, liveLink, githubLink }) 
           </div>
         </div>
       </div>
-      
+
       <div className="p-5">
         <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{title}</h3>
-        
+
         <div className="flex justify-between mt-4">
           {liveLink && (
-            <a 
+            <a
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -41,9 +42,9 @@ const ProjectCard = ({ title, description, image, tags, liveLink, githubLink }) 
               <FaExternalLinkAlt /> Live Demo
             </a>
           )}
-          
+
           {githubLink && (
-            <a 
+            <a
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -60,6 +61,15 @@ const ProjectCard = ({ title, description, image, tags, liveLink, githubLink }) 
 
 const MyProjects = () => {
   const projects = [
+
+    {
+      title: "GulDasta – Customizable Flower Bouquet Platform 🌸",
+      description: "A Next.js and TypeScript-based platform for creating and ordering personalized flower bouquets with real-time previews. Features a user-friendly interface, and an admin dashboard for managing orders and inventory.",
+      image: guldasta,
+      tags: ["Next js", "TypeScript", "Node js", "Express JS", "Mongodb", "Tailwind CSS"],
+      liveLink: "https://guldasta.vercel.app/",
+      githubLink: "#"
+    },
     {
       title: "Ecommerce Website",
       description: "Full-featured online store with cart, payment processing, and admin dashboard",
@@ -138,7 +148,7 @@ const MyProjects = () => {
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -155,14 +165,14 @@ const MyProjects = () => {
           ))}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <a 
+          <a
             href="#"
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-shadow"
           >

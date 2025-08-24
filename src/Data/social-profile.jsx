@@ -7,7 +7,7 @@ export const socialProfileData = [
   {
     title : "LinkedIn",
     icon : <FaLinkedin />,
-    profileLink : "www.linkedin.com/in/fahad-khan-portfolio",
+    profileLink : "www.linkedin.com/in/fahad-khan-96b4a32a7",
     color : "text-blue-700"
   },
   {

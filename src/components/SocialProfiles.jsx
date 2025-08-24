@@ -8,7 +8,7 @@ import {
 const SocialProfiles = () => {
   const socialProfileData = [
     { icon: <FaGithub className="text-4xl" />, title: "GitHub", color: "from-gray-800 to-black", link: "https://github.com/FahadKhanLangah" },
-    { icon: <FaLinkedin className="text-4xl" />, title: "LinkedIn", color: "from-blue-700 to-blue-900", link: "https://linkedin.com/in/itx_fahadkhan" },
+    { icon: <FaLinkedin className="text-4xl" />, title: "LinkedIn", color: "from-blue-700 to-blue-900", link: "www.linkedin.com/in/fahad-khan-96b4a32a7" },
     // { icon: <FaInstagram className="text-4xl" />, title: "Instagram", color: "from-purple-600 via-pink-600 to-red-500", link: '#home' },
     { icon: <FaEnvelope className="text-4xl" />, title: "Email", color: "from-red-500 to-red-700", link: "mailto:fahadkhanavoid@gmail.com" },
     { icon: <FaFacebook className="text-4xl" />, title: "Facebook", color: "from-blue-600 to-blue-800", link: "https://www.facebook.com/share/1BjvASMPnR/" },
@@ -44,7 +44,11 @@ const SocialProfiles = () => {
   const openLink = (link, title) => {
     if (title === "Email") {
       window.location.href = link;
-    } else {
+    } else if (title === "LinkedIn" && !link.startsWith("http")) {
+      window.open("https://" + link, "_blank");
+    }
+
+    else {
       window.open(link, "_blank");
     }
   };
