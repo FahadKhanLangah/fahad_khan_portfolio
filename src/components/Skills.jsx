@@ -3,7 +3,7 @@ import { DiMongodb } from "react-icons/di";
 import { FaNode, FaReact } from "react-icons/fa6";
 import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiDart, SiExpress, SiFirebase, SiFlutter, SiGit, SiGithub, SiMysql } from "react-icons/si";
+import { SiDart, SiExpress, SiFirebase, SiFlutter, SiGit, SiGithub, SiMysql, SiTypescript } from "react-icons/si";
 
 const Skills = () => {
   // Categorized skills data
@@ -17,6 +17,7 @@ const Skills = () => {
         { icon: <IoLogoJavascript className="text-4xl" />, name: "JavaScript", level: 92 },
         { icon: <FaReact className="text-4xl" />, name: "React", level: 88 },
         { icon: <RiTailwindCssFill className="text-4xl" />, name: "Tailwind CSS", level: 85 },
+        { icon: <SiTypescript className="text-4xl" />, name: "TypeScript", level: 80 },
       ]
     },
     {
@@ -27,7 +28,7 @@ const Skills = () => {
         { icon: <SiExpress className="text-4xl" />, name: "Express", level: 85 },
         { icon: <DiMongodb className="text-4xl" />, name: "MongoDB", level: 83 },
         { icon: <SiMysql className="text-4xl" />, name: "MySQL", level: 80 },
-        { icon: <SiFirebase className="text-4xl" />, name: "Firebase", level: 82 },
+        { icon: <SiFirebase className="text-4xl" />, name: "Firebase", level: 70 },
       ]
     },
     {
@@ -99,7 +100,7 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -116,7 +117,7 @@ const Skills = () => {
                 <span className="text-3xl mr-3">{category.icon}</span>
                 <h3 className="text-xl font-bold text-white">{category.name}</h3>
               </div>
-              
+
               <div className="p-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
@@ -129,7 +130,7 @@ const Skills = () => {
                       {skill.icon}
                     </div>
                     <h4 className="font-bold text-gray-800 dark:text-white text-center">{skill.name}</h4>
-                    
+
                     {/* Skill level indicator */}
                     <div className="w-full mt-3">
                       <div className="flex justify-between text-xs text-gray-500 dark:text-gray-300 mb-1">
@@ -137,7 +138,7 @@ const Skills = () => {
                         <span>{skill.level}%</span>
                       </div>
                       <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-                        <motion.div 
+                        <motion.div
                           className="bg-gradient-to-r from-blue-500 to-cyan-400 h-2 rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: `${skill.level}%` }}
@@ -153,7 +154,7 @@ const Skills = () => {
         </motion.div>
 
         {/* Experience Summary */}
-        <motion.div 
+        <motion.div
           className="mt-16 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl p-8 text-white shadow-xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
