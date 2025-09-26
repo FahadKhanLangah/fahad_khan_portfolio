@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-import todoImg from '../assets/todo.png'
+import todoImg from '../assets/aincore.png'
 import guldasta from '../assets/guldasta.png'
 const ProjectCard = ({ title, description, image, tags, liveLink, githubLink }) => {
   return (
@@ -95,11 +95,11 @@ const MyProjects = () => {
       githubLink: "#"
     },
     {
-      title: "To Do App",
-      description: "Task management application with add & delete",
+      title: "Aincore Crypto Site",
+      description: "Complete crypto site with admin panel and the site is fully customizeable",
       image: todoImg,
-      tags: ["React", "localstorage", "Tailwind CSS"],
-      liveLink: "https://todo-app-fahad-khan.vercel.app/",
+      tags: ["Next Js", "MySql", "Custom classes"],
+      liveLink: "https://aincore.org/",
       githubLink: "#"
     },
     {
@@ -173,10 +173,10 @@ const MyProjects = () => {
           viewport={{ once: true }}
         >
           <a
-            href="#"
+            href="/"
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-shadow"
           >
-            View All Projects
+            All Projects
             <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>

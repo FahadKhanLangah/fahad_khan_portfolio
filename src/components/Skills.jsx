@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { DiMongodb } from "react-icons/di";
 import { FaNode, FaReact } from "react-icons/fa6";
+import { FcNext } from "react-icons/fc";
 import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiDart, SiExpress, SiFirebase, SiFlutter, SiGit, SiGithub, SiMysql, SiTypescript } from "react-icons/si";
+import { SiDart, SiExpress, SiFirebase, SiFlutter, SiGit, SiGithub, SiMysql, SiNestjs, SiTypescript } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 
 const Skills = () => {
   // Categorized skills data
@@ -17,7 +19,7 @@ const Skills = () => {
         { icon: <IoLogoJavascript className="text-4xl" />, name: "JavaScript", level: 92 },
         { icon: <FaReact className="text-4xl" />, name: "React", level: 88 },
         { icon: <RiTailwindCssFill className="text-4xl" />, name: "Tailwind CSS", level: 85 },
-        { icon: <SiTypescript className="text-4xl" />, name: "TypeScript", level: 80 },
+        { icon: <TbBrandNextjs className="text-4xl" />, name: "Next Js", level: 80 },
       ]
     },
     {
@@ -26,6 +28,7 @@ const Skills = () => {
       skills: [
         { icon: <FaNode className="text-4xl" />, name: "Node.js", level: 87 },
         { icon: <SiExpress className="text-4xl" />, name: "Express", level: 85 },
+        { icon: <SiNestjs className="text-4xl" />, name: "Nest Js", level: 80 },
         { icon: <DiMongodb className="text-4xl" />, name: "MongoDB", level: 83 },
         { icon: <SiMysql className="text-4xl" />, name: "MySQL", level: 80 },
         { icon: <SiFirebase className="text-4xl" />, name: "Firebase", level: 70 },
@@ -170,15 +173,15 @@ const Skills = () => {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="bg-white/10 p-4 rounded-xl text-center min-w-[120px]">
-                <div className="text-3xl font-bold">2+</div>
+                <div className="text-3xl font-bold">4+</div>
                 <div>Years Experience</div>
               </div>
               <div className="bg-white/10 p-4 rounded-xl text-center min-w-[120px]">
-                <div className="text-3xl font-bold">20+</div>
+                <div className="text-3xl font-bold">35+</div>
                 <div>Projects</div>
               </div>
               <div className="bg-white/10 p-4 rounded-xl text-center min-w-[120px]">
-                <div className="text-3xl font-bold">10+</div>
+                <div className="text-3xl font-bold">15+</div>
                 <div>Happy Clients</div>
               </div>
             </div>
