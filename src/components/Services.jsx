@@ -3,37 +3,43 @@ import { FaLaptopCode, FaMobileAlt, FaServer, FaPalette, FaCode } from "react-ic
 
 const Services = () => {
   const services = [
-    {
-      icon: <FaLaptopCode className="text-4xl" />,
-      title: "Full Stack Development",
-      description: "End-to-end web applications with modern frameworks like React, Node.js, and Express",
-      color: "from-blue-600 to-blue-800"
-    },
-    {
-      icon: <FaMobileAlt className="text-4xl" />,
-      title: "Mobile App Development",
-      description: "Cross-platform mobile apps with Flutter for iOS and Android",
-      color: "from-green-500 to-green-700"
-    },
-    {
-      icon: <FaServer className="text-4xl" />,
-      title: "Backend Development",
-      description: "Robust API development, database design, and server management",
-      color: "from-purple-500 to-purple-700"
-    },
-    {
-      icon: <FaPalette className="text-4xl" />,
-      title: "UI/UX Design",
-      description: "User-centered designs with intuitive interfaces and engaging experiences",
-      color: "from-pink-500 to-pink-700"
-    },
-    {
-      icon: <FaCode className="text-4xl" />,
-      title: "Frontend Development",
-      description: "Responsive, accessible interfaces with React and modern CSS frameworks",
-      color: "from-cyan-500 to-cyan-700"
-    }
-  ];
+  {
+    icon: <FaLaptopCode className="text-4xl" />,
+    title: "Full Stack Development",
+    description:
+      "Custom end-to-end web applications using modern frameworks like React, Next.js, and Node.js—scalable, secure, and tailored to your business.",
+    color: "from-blue-600 to-blue-800",
+  },
+  {
+    icon: <FaMobileAlt className="text-4xl" />,
+    title: "Mobile App Development",
+    description:
+      "Cross-platform mobile apps built with Flutter—delivering smooth, native-like performance on both iOS and Android.",
+    color: "from-green-500 to-green-700",
+  },
+  {
+    icon: <FaServer className="text-4xl" />,
+    title: "Backend Engineering",
+    description:
+      "Powerful and reliable backend systems with REST APIs, optimized databases, and server management for seamless performance.",
+    color: "from-purple-500 to-purple-700",
+  },
+  {
+    icon: <FaPalette className="text-4xl" />,
+    title: "UI/UX Design",
+    description:
+      "Intuitive, user-focused interfaces that blend functionality with engaging design—crafted to keep users coming back.",
+    color: "from-pink-500 to-pink-700",
+  },
+  {
+    icon: <FaCode className="text-4xl" />,
+    title: "Frontend Development",
+    description:
+      "Fast, responsive, and accessible interfaces built with React and modern styling frameworks like Tailwind CSS.",
+    color: "from-cyan-500 to-cyan-700",
+  },
+];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },

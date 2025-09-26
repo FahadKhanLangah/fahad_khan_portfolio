@@ -2,16 +2,26 @@ import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
 import fahdimg from '../assets/Fahad.jpg'
 const Hero = () => {
-  // Typed strings optimized for client-focused messaging
   const typedStrings = [
-    "Building high-performance web & mobile solutions",
-    "Full-stack developer specializing in MERN & Flutter",
-    "Creating digital experiences that drive business results",
-    "Available for freelance projects and full-time roles"
+    "🚀 Transforming ideas into scalable, high-performance web & mobile apps."
+    ,
+    "💻 Full-Stack Developer | MERN, Next.js & Flutter | Delivering end-to-end solutions."
+    ,
+    "🎯 Helping businesses grow through modern, user-focused digital solutions."
+    ,
+    "🔒 Clean, scalable, and secure code that powers long-term business success."
+    ,
+    "🌍 Remote-ready developer with 4+ years experience building global products."
+    ,
+    "🤝 Your tech partner for web & mobile projects—on time, on budget, on point."
+    ,
+    "⚡ Turning complex problems into simple, elegant digital solutions."
+    ,
+    "📈 Building fast, scalable, and results-driven applications that fuel business growth."
   ];
 
   return (
-    <section 
+    <section
       className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-16 px-4 dark:bg-gray-900 py-12 md:py-24"
       id="home"
     >
@@ -30,11 +40,11 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text mb-4">
             Fahad Khan
           </h1>
-          
+
           <h2 className="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-6">
-            Full Stack & Flutter Developer
+            Full Stack Website & App Solutions
           </h2>
-          
+
           <div className="h-20 md:h-24 flex items-center justify-center md:justify-start mb-6">
             <p className="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-300">
               <ReactTyped
@@ -51,7 +61,7 @@ const Hero = () => {
         </motion.div>
 
         {/* CTA Buttons */}
-        <motion.div 
+        <motion.div
           className="flex flex-wrap gap-4 justify-center mt-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -65,9 +75,9 @@ const Hero = () => {
           >
             View Projects
           </motion.a>
-          
-          
-      <motion.a
+
+
+          <motion.a
             href="#contact"
             className="px-6 py-3 bg-white dark:bg-gray-900 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-700 font-semibold rounded-lg shadow-lg transition-colors"
             whileHover={{ scale: 1.05 }}
@@ -87,12 +97,12 @@ const Hero = () => {
       >
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full blur-xl opacity-75 animate-pulse"></div>
-          
+
           <motion.div
             className="relative border-4 border-white dark:border-blue-800 rounded-full overflow-hidden shadow-2xl"
             initial={{ rotate: -5 }}
             animate={{ rotate: 5 }}
-            transition={{ 
+            transition={{
               duration: 4,
               repeat: Infinity,
               repeatType: "reverse",
@@ -101,7 +111,7 @@ const Hero = () => {
           >
             <img className="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 md:w-80 md:h-80" src={fahdimg} alt="fahad-khan-portfolio" />
           </motion.div>
-          
+
           {/* Flutter & Web Badges */}
           <motion.div
             className="absolute -bottom-4 -right-4 bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
@@ -111,7 +121,7 @@ const Hero = () => {
           >
             Flutter Expert
           </motion.div>
-          
+
           <motion.div
             className="absolute -top-4 -left-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
             initial={{ y: -20, opacity: 0 }}
