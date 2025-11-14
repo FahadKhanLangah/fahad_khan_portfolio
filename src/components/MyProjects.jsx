@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import todoImg from '../assets/aincore.png'
 import guldasta from '../assets/guldasta.png'
+import orbit from '../assets/orbit.jpg'
 const ProjectCard = ({ title, description, image, tags, liveLink, githubLink }) => {
   return (
     <motion.div
@@ -71,7 +72,7 @@ const MyProjects = () => {
       githubLink: "#"
     },
     {
-      title: "Ecommerce Website",
+      title: "Ecommerce Website for Shoping",
       description: "Full-featured online store with cart, payment processing, and admin dashboard",
       image: "https://static.vecteezy.com/system/resources/previews/006/547/178/non_2x/creative-modern-abstract-ecommerce-logo-design-colorful-gradient-online-shopping-bag-logo-design-template-free-vector.jpg",
       tags: ["React", "Express", "MongoDB", "Stripe"],
@@ -96,17 +97,17 @@ const MyProjects = () => {
     },
     {
       title: "Aincore Crypto Site",
-      description: "Complete crypto site with admin panel and the site is fully customizeable",
+      description: "Developed a crypto-based website with responsive UI and real-time data features.\nBuilt custom backend logic and database schema for secure data handling.",
       image: todoImg,
       tags: ["Next Js", "MySql", "Custom classes"],
       liveLink: "https://aincore.org/",
       githubLink: "#"
     },
     {
-      title: "Weather Dashboard",
-      description: "Real-time weather information with location detection and forecasts",
-      image: "https://uizard.io/static/e9ec22aba80d02f9a17f91ec301e3930/e4eb1/e2ace803d7554339df5d8f28d44425c57009f827-1440x858.png",
-      tags: ["Flutter", "OpenWeather API", "Geolocation"],
+      title: "Orbit Chat & Ride-Hailing App",
+      description: " Built APIs for chat, ride management, driver tracking, and authentication.\nIntegrated maps, geolocation, and payment methods (M-Pesa, Stripe).\nDeveloped admin dashboard APIs with role-based permissions.App available on Play Store.",
+      image: orbit,
+      tags: ["Flutter", "Nest Js", "Mongodb", "Payment Gateway M-Pesa","Google Maps Services"],
       liveLink: "#",
       githubLink: "#"
     }
@@ -165,7 +166,7 @@ const MyProjects = () => {
           ))}
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -181,7 +182,7 @@ const MyProjects = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

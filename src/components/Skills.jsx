@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import { DiMongodb } from "react-icons/di";
 import { FaNode, FaReact } from "react-icons/fa6";
-import { FcNext } from "react-icons/fc";
 import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from "react-icons/io5";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiDart, SiExpress, SiFirebase, SiFlutter, SiGit, SiGithub, SiMysql, SiNestjs, SiTypescript } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
+import { SiDart, SiExpress, SiFirebase, SiFlutter, SiGit, SiGithub, SiMysql, SiNestjs } from "react-icons/si";
+import { TbBrandNextjs, TbBrandTypescript } from "react-icons/tb";
 
 const Skills = () => {
   // Categorized skills data
@@ -17,8 +15,8 @@ const Skills = () => {
         { icon: <IoLogoHtml5 className="text-4xl" />, name: "HTML5", level: 95 },
         { icon: <IoLogoCss3 className="text-4xl" />, name: "CSS3", level: 90 },
         { icon: <IoLogoJavascript className="text-4xl" />, name: "JavaScript", level: 92 },
+        { icon: <TbBrandTypescript className="text-4xl" />, name: "TypeScript", level: 85 },
         { icon: <FaReact className="text-4xl" />, name: "React", level: 88 },
-        { icon: <RiTailwindCssFill className="text-4xl" />, name: "Tailwind CSS", level: 85 },
         { icon: <TbBrandNextjs className="text-4xl" />, name: "Next Js", level: 80 },
       ]
     },
@@ -173,15 +171,15 @@ const Skills = () => {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="bg-white/10 p-4 rounded-xl text-center min-w-[120px]">
-                <div className="text-3xl font-bold">4+</div>
+                <div className="text-3xl font-bold">3+</div>
                 <div>Years Experience</div>
               </div>
               <div className="bg-white/10 p-4 rounded-xl text-center min-w-[120px]">
-                <div className="text-3xl font-bold">35+</div>
+                <div className="text-3xl font-bold">20+</div>
                 <div>Projects</div>
               </div>
               <div className="bg-white/10 p-4 rounded-xl text-center min-w-[120px]">
-                <div className="text-3xl font-bold">15+</div>
+                <div className="text-3xl font-bold">10+</div>
                 <div>Happy Clients</div>
               </div>
             </div>

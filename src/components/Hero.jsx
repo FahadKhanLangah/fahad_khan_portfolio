@@ -11,7 +11,7 @@ const Hero = () => {
     ,
     "🔒 Clean, scalable, and secure code that powers long-term business success."
     ,
-    "🌍 Remote-ready developer with 4+ years experience building global products."
+    "🌍 Remote-ready developer with 3+ years experience building global products."
     ,
     "🤝 Your tech partner for web & mobile projects—on time, on budget, on point."
     ,
@@ -30,7 +30,7 @@ const Hero = () => {
         className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.0, ease: "easeOut" }}
       >
         <motion.div
           initial={{ opacity: 0 }}

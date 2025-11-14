@@ -110,7 +110,10 @@ const Services = () => {
                         <>
                           <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">React</span>
                           <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Node.js</span>
-                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Express</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Express</span>\
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Next.js</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Nest.js</span>
+
                         </>
                       )}
                       {index === 1 && (
@@ -125,6 +128,8 @@ const Services = () => {
                           <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">MongoDB</span>
                           <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">MySQL</span>
                           <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">REST API</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Nest.js</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Express.js</span>
                         </>
                       )}
                       {index === 3 && (
@@ -137,6 +142,7 @@ const Services = () => {
                       {index === 4 && (
                         <>
                           <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
+                          <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">TypeScript</span>
                           <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
                           <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Responsive</span>
                         </>
@@ -160,7 +166,7 @@ const Services = () => {
             <div className="mb-6 md:mb-0 md:mr-8">
               <h3 className="text-2xl font-bold mb-2">My Development Process</h3>
               <p className="opacity-80">
-                I follow an agile approach to deliver high-quality solutions on time and within budget.
+                I follow agile approach to deliver high-quality solutions on time and within budget.
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
