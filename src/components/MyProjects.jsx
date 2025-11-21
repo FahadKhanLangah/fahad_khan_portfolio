@@ -62,7 +62,22 @@ const ProjectCard = ({ title, description, image, tags, liveLink, githubLink }) 
 
 const MyProjects = () => {
   const projects = [
-
+    {
+      title: "Aincore Crypto Site",
+      description: "Developed a crypto-based website with responsive UI and real-time data features.\nBuilt custom backend logic and database schema for secure data handling.",
+      image: todoImg,
+      tags: ["Next Js", "MySql", "Custom classes"],
+      liveLink: "https://aincore.org/",
+      githubLink: "#"
+    },
+    {
+      title: "Orbit Chat & Ride-Hailing App",
+      description: " Built APIs for chat, ride management, driver tracking, and authentication.\nIntegrated maps, geolocation, and payment methods (M-Pesa, Stripe).\nDeveloped admin dashboard APIs with role-based permissions.App available on Play Store.",
+      image: orbit,
+      tags: ["Flutter", "Nest Js", "Mongodb", "Payment Gateway M-Pesa", "Google Maps Services"],
+      liveLink: "https://orbit.ke/",
+      githubLink: "#"
+    },
     {
       title: "GulDasta – Customizable Flower Bouquet Platform 🌸",
       description: "A Next.js and TypeScript-based platform for creating and ordering personalized flower bouquets with real-time previews. Features a user-friendly interface, and an admin dashboard for managing orders and inventory.",
@@ -95,22 +110,6 @@ const MyProjects = () => {
       liveLink: "#home",
       githubLink: "#"
     },
-    {
-      title: "Aincore Crypto Site",
-      description: "Developed a crypto-based website with responsive UI and real-time data features.\nBuilt custom backend logic and database schema for secure data handling.",
-      image: todoImg,
-      tags: ["Next Js", "MySql", "Custom classes"],
-      liveLink: "https://aincore.org/",
-      githubLink: "#"
-    },
-    {
-      title: "Orbit Chat & Ride-Hailing App",
-      description: " Built APIs for chat, ride management, driver tracking, and authentication.\nIntegrated maps, geolocation, and payment methods (M-Pesa, Stripe).\nDeveloped admin dashboard APIs with role-based permissions.App available on Play Store.",
-      image: orbit,
-      tags: ["Flutter", "Nest Js", "Mongodb", "Payment Gateway M-Pesa","Google Maps Services"],
-      liveLink: "#",
-      githubLink: "#"
-    }
   ];
 
   const containerVariants = {

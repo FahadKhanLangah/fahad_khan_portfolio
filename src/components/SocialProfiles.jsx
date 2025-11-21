@@ -63,10 +63,10 @@ const SocialProfiles = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text inline-block">
-            Connect With Me
+            Add Me Now
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Let`s collaborate! Reach out through any of these platforms or send me a message directly.
+            Let&apos;s collaborate! Reach out through any of these platforms or send me a message directly.
           </p>
         </motion.div>
 
@@ -86,7 +86,7 @@ const SocialProfiles = () => {
               className="cursor-pointer"
             >
               <div className={`h-full bg-gradient-to-br ${social.color} rounded-2xl overflow-hidden shadow-lg transition-all duration-300`}>
-                <div className="p-6 flex flex-col items-center justify-center">
+                <div className="p-3 flex flex-col items-center justify-center">
                   <div className="text-white mb-4">
                     {social.icon}
                   </div>
@@ -106,9 +106,9 @@ const SocialProfiles = () => {
         >
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0 md:mr-8">
-              <h3 className="text-2xl font-bold mb-2">Let`s Work Together</h3>
+              <h3 className="text-2xl font-bold mb-2">Let&apos;s Work Together</h3>
               <p className="opacity-90">
-                Have a project in mind? I`m available for freelance work and full-time opportunities.
+                Have a project in mind? I&apos;m available for freelance work and full-time opportunities.
               </p>
             </div>
             <a

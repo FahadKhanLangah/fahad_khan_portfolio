@@ -22,7 +22,7 @@ const Hero = () => {
 
   return (
     <section
-      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-16 px-4 dark:bg-gray-900 py-12 md:py-24"
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-16 px-4  dark:bg-gray-900 py-12 md:py-24"
       id="home"
     >
       {/* Text Content - Left Column */}
@@ -68,7 +68,7 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
         >
           <motion.a
-            href="#projects"
+            href="#work"
             className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -100,8 +100,8 @@ const Hero = () => {
 
           <motion.div
             className="relative border-4 border-white dark:border-blue-800 rounded-full overflow-hidden shadow-2xl"
-            initial={{ rotate: -5 }}
-            animate={{ rotate: 5 }}
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 0 }}
             transition={{
               duration: 4,
               repeat: Infinity,
@@ -119,7 +119,7 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            Flutter Expert
+            Flutter Developer
           </motion.div>
 
           <motion.div
