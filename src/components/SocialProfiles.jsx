@@ -70,8 +70,9 @@ const SocialProfiles = () => {
           </p>
         </motion.div>
 
+
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
+          className="grid grid-cols-3 text-sm lg:mx-24 font-mono items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-16 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -85,9 +86,9 @@ const SocialProfiles = () => {
               onClick={() => openLink(social.link, social.title)}
               className="cursor-pointer"
             >
-              <div className={`h-full bg-gradient-to-br ${social.color} rounded-2xl overflow-hidden shadow-lg transition-all duration-300`}>
-                <div className="p-3 flex flex-col items-center justify-center">
-                  <div className="text-white mb-4">
+              <div className={`h-full bg-gradient-to-br ${social.color} rounded-xl overflow-hidden shadow-lg transition-all duration-300`}>
+                <div className="py-3 flex flex-col items-center justify-center">
+                  <div className="text-white mb-1">
                     {social.icon}
                   </div>
                   <h3 className="text-white font-bold text-center">{social.title}</h3>
