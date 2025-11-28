@@ -1,6 +1,6 @@
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
-import fahdimg from '../assets/Fahad.jpg'
+import fahdimg from '../assets/fahadwithoutbg.png';
 const Hero = () => {
   const typedStrings = [
     "🚀 Transforming ideas into scalable, high-performance web & mobile apps."
@@ -96,10 +96,10 @@ const Hero = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full blur-xl opacity-75 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-br dark:from-blue-500 dark:to-cyan-400 rounded-full blur-xl opacity-75 animate-pulse"></div>
 
           <motion.div
-            className="relative border-4 border-white dark:border-blue-800 rounded-full overflow-hidden shadow-2xl"
+            className="relative border-4 border-gray-500 dark:border-blue-800 rounded-full overflow-hidden shadow-2xl"
             initial={{ rotate: 0 }}
             animate={{ rotate: 0 }}
             transition={{
@@ -109,7 +109,7 @@ const Hero = () => {
               ease: "easeInOut"
             }}
           >
-            <img className="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 md:w-80 md:h-80" src={fahdimg} alt="fahad-khan-portfolio" />
+            <img className="bg-gray-200 scale-110 dark:bg-gray-900 border-2 border-dashed rounded-xl max-w-64 max-h-64 md:w-80 md:h-80" src={fahdimg} alt="fahad-khan-portfolio" />
           </motion.div>
 
           {/* Flutter & Web Badges */}

@@ -21,19 +21,25 @@ const Skills = () => {
       ]
     },
     {
-      name: "Backend & Databases",
+      name: "Backend Development",
       icon: "⚙️",
       skills: [
         { icon: <FaNode className="text-4xl" />, name: "Node.js", level: 87 },
         { icon: <SiExpress className="text-4xl" />, name: "Express", level: 85 },
         { icon: <SiNestjs className="text-4xl" />, name: "Nest Js", level: 80 },
+      ]
+    },
+    {
+      name: "Database",
+      icon: "🗄️",
+      skills: [
         { icon: <DiMongodb className="text-4xl" />, name: "MongoDB", level: 83 },
         { icon: <SiMysql className="text-4xl" />, name: "MySQL", level: 80 },
         { icon: <SiFirebase className="text-4xl" />, name: "Firebase", level: 70 },
       ]
     },
     {
-      name: "Mobile Development",
+      name: "Mobile App Development",
       icon: "📱",
       skills: [
         { icon: <SiFlutter className="text-4xl" />, name: "Flutter", level: 70 },

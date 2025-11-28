@@ -63,16 +63,14 @@ const SocialProfiles = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text inline-block">
-            Add Me Now
+            Connect with Me
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Let&apos;s collaborate! Reach out through any of these platforms or send me a message directly.
           </p>
         </motion.div>
-
-
         <motion.div
-          className="grid grid-cols-3 text-sm lg:mx-24 font-mono items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-16 gap-6"
+          className="grid grid-cols-3 text-sm lg:mx-24 font-mono items-center sm:grid-cols-4 md:grid-cols-5 sm:gap-8 md:gap-12 lg:grid-cols-5 lg:gap-16 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
