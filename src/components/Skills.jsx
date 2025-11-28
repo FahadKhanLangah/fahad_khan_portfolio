@@ -91,7 +91,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-16 px-4 sm:px-8 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <section id="skills" className="py-8 px-4 sm:px-8 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -100,7 +100,7 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text inline-block">
-            Technical Expertise
+            Skills and Expertise
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             I specialize in modern web and mobile technologies that help build fast, scalable, and user-friendly applications.

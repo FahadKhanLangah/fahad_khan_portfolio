@@ -96,7 +96,7 @@ const Hero = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-br dark:from-blue-500 dark:to-cyan-400 rounded-full blur-xl opacity-75 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-br bg-gray-600 to-gray-700 dark:from-blue-500 dark:to-cyan-400 rounded-full blur-xl opacity-75 animate-pulse"></div>
 
           <motion.div
             className="relative border-4 border-gray-500 dark:border-blue-800 rounded-full overflow-hidden shadow-2xl"
