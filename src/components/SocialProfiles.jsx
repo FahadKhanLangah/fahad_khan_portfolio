@@ -1,20 +1,61 @@
+import emailjs from "@emailjs/browser";
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import toast from "react-hot-toast";
 import {
   FaGithub, FaLinkedin,
   FaFacebook, FaEnvelope,
   FaWhatsapp,
 } from 'react-icons/fa';
 
+const socialProfileData = [
+  { icon: <FaGithub className="text-4xl" />, title: "GitHub", color: "from-gray-800 to-black", link: "https://github.com/FahadKhanLangah" },
+  { icon: <FaLinkedin className="text-4xl" />, title: "LinkedIn", color: "from-blue-700 to-blue-900", link: "www.linkedin.com/in/fahad-khan-96b4a32a7" },
+  // { icon: <FaInstagram className="text-4xl" />, title: "Instagram", color: "from-purple-600 via-pink-600 to-red-500", link: '#home' },
+  { icon: <FaEnvelope className="text-4xl" />, title: "Email", color: "from-red-500 to-red-700", link: "mailto:fahadkhanavoid@gmail.com" },
+  { icon: <FaFacebook className="text-4xl" />, title: "Facebook", color: "from-blue-600 to-blue-800", link: "https://www.facebook.com/share/1BjvASMPnR/" },
+  { icon: <FaWhatsapp className="text-4xl" />, title: "WhatsApp", color: "from-green-500 to-green-700", link: "https://wa.me/+923187357005" },
+];
 const SocialProfiles = () => {
-  const socialProfileData = [
-    { icon: <FaGithub className="text-4xl" />, title: "GitHub", color: "from-gray-800 to-black", link: "https://github.com/FahadKhanLangah" },
-    { icon: <FaLinkedin className="text-4xl" />, title: "LinkedIn", color: "from-blue-700 to-blue-900", link: "www.linkedin.com/in/fahad-khan-96b4a32a7" },
-    // { icon: <FaInstagram className="text-4xl" />, title: "Instagram", color: "from-purple-600 via-pink-600 to-red-500", link: '#home' },
-    { icon: <FaEnvelope className="text-4xl" />, title: "Email", color: "from-red-500 to-red-700", link: "mailto:fahadkhanavoid@gmail.com" },
-    { icon: <FaFacebook className="text-4xl" />, title: "Facebook", color: "from-blue-600 to-blue-800", link: "https://www.facebook.com/share/1BjvASMPnR/" },
-    { icon: <FaWhatsapp className="text-4xl" />, title: "WhatsApp", color: "from-green-500 to-green-700", link: "https://wa.me/+923187357005" },
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-  ];
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !message) {
+      toast.error("Please fill in all fields.");
+      return;
+    }
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+    };
+
+    emailjs
+      .send(
+        "service_3iajl3i",     // service_xxxx
+        "template_ihjiys6",    // template_xxxx
+        templateParams,
+        "H4NBGEd2kpiWac-gV"      // public key
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully!");
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          console.log(error);
+          alert("Failed to send message. Try again.");
+        }
+      );
+  };
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -86,7 +127,7 @@ const SocialProfiles = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-4 w-full">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
             {/* Name */}
             <div className="flex flex-col gap-1">
               <label className="font-semibold text-sm text-gray-200 dark:text-gray-300">
@@ -99,6 +140,8 @@ const SocialProfiles = () => {
                  rounded-lg px-3 py-2 text-sm outline-none
                  focus:border-blue-500 focus:ring-2 focus:ring-blue-300 
                  transition-all"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
               />
             </div>
 
@@ -114,6 +157,8 @@ const SocialProfiles = () => {
                  rounded-lg px-3 py-2 text-sm outline-none
                  focus:border-blue-500 focus:ring-2 focus:ring-blue-300 
                  transition-all"
+                onChange={e => setEmail(e.target.value)}
+                value={email}
               />
             </div>
 
@@ -129,18 +174,22 @@ const SocialProfiles = () => {
                  rounded-lg px-3 py-2 text-sm outline-none resize-none
                  focus:border-blue-500 focus:ring-2 focus:ring-blue-300 
                  transition-all"
+                onChange={e => setMessage(e.target.value)}
+                value={message}
               ></textarea>
 
             </div>
             <div className='flex w-full justify-end'>
               <button
+                type="submit"
+                onClick={handleSubmit}
                 className="px-6 py-3 max-w-52 dark:bg-gray-900 bg-white dark:text-white text-blue-600 font-bold rounded-lg shadow-lg hover:shadow-xl transition-shadow flex items-center"
               >
                 <FaEnvelope className="mr-2" />
                 Send Message
               </button>
             </div>
-          </div>
+          </form>
 
 
         </motion.div>

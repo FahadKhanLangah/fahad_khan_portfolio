@@ -6,9 +6,9 @@ import Navbar from "./components/Navbar"
 import Services from "./components/Services"
 import Skills from "./components/Skills"
 import SocialProfiles from "./components/SocialProfiles"
-  
+import { Toaster } from 'react-hot-toast';
 function App() {
-const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const isDark = localStorage.getItem('darkMode') === 'true';
@@ -17,12 +17,27 @@ const [darkMode, setDarkMode] = useState(false);
   }, []);
   return (
     <div className={darkMode ? 'dark' : ''}>
+      <Toaster position="top-center" toastOptions={{
+        duration: 4000,
+        style: {
+          background: "#1e293b",
+          color: "#fff",
+          padding: "12px 16px",
+          borderRadius: "10px",
+          fontSize: "16px",
+        },
+        success: {
+          style: {
+            background: "#180101",
+          },
+        },
+      }} />
       <Navbar></Navbar>
       <Hero></Hero>
       <Skills></Skills>
       <Services></Services>
       <MyProjects></MyProjects>
-      <SocialProfiles/>
+      <SocialProfiles />
       <Footer></Footer>
     </div>
   )
