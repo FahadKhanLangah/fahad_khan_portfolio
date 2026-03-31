@@ -109,7 +109,7 @@ const Hero = () => {
               ease: "easeInOut"
             }}
           >
-            <img className="bg-gray-200 scale-110 dark:bg-gray-900 border-2 border-dashed rounded-xl max-w-64 max-h-64 md:w-80 md:h-80" src={fahdimg} alt="fahad-khan-portfolio" />
+            <img className="bg-[#0A0F2C] scale-110 dark:bg-[#0A0F2C] border-2 border-dashed rounded-xl max-w-64 max-h-64 md:w-80 md:h-80" src={fahdimg} alt="fahad-khan-portfolio" />
           </motion.div>
 
           {/* Flutter & Web Badges */}
