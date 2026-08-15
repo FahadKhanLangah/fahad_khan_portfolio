@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { DiMongodb } from "react-icons/di";
+import { DiDjango, DiMongodb, DiPython } from "react-icons/di";
 import { FaNode, FaReact } from "react-icons/fa6";
 import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from "react-icons/io5";
-import { SiDart, SiExpress, SiFirebase, SiFlutter, SiGit, SiGithub, SiMysql, SiNestjs } from "react-icons/si";
+import { SiDart, SiExpress, SiFirebase, SiFlutter, SiGit, SiGithub, SiMysql, SiNestjs, SiPrisma } from "react-icons/si";
 import { TbBrandNextjs, TbBrandTypescript } from "react-icons/tb";
 
 const Skills = () => {
@@ -16,6 +16,7 @@ const Skills = () => {
         { icon: <IoLogoCss3 className="text-4xl" />, name: "CSS3", level: 90 },
         { icon: <IoLogoJavascript className="text-4xl" />, name: "JavaScript", level: 92 },
         { icon: <TbBrandTypescript className="text-4xl" />, name: "TypeScript", level: 85 },
+        { icon: <DiPython className="text-4xl" />, name: "Python", level: 85 },
         { icon: <FaReact className="text-4xl" />, name: "React", level: 88 },
         { icon: <TbBrandNextjs className="text-4xl" />, name: "Next Js", level: 80 },
       ]
@@ -27,15 +28,18 @@ const Skills = () => {
         { icon: <FaNode className="text-4xl" />, name: "Node.js", level: 87 },
         { icon: <SiExpress className="text-4xl" />, name: "Express", level: 85 },
         { icon: <SiNestjs className="text-4xl" />, name: "Nest Js", level: 80 },
+        { icon: <DiDjango className="text-4xl" />, name: "Django", level: 65 },
       ]
     },
     {
-      name: "Database",
+      name: "Database and ORMs",
       icon: "🗄️",
       skills: [
         { icon: <DiMongodb className="text-4xl" />, name: "MongoDB", level: 83 },
         { icon: <SiMysql className="text-4xl" />, name: "MySQL", level: 80 },
         { icon: <SiFirebase className="text-4xl" />, name: "Firebase", level: 70 },
+        { icon: <SiPrisma className="text-4xl" />, name: "Prisma", level: 80 },
+        { icon: <DiMongodb className="text-4xl" />, name: "Mongoose", level: 80 },
       ]
     },
     {
