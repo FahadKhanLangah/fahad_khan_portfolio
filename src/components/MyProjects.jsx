@@ -4,6 +4,9 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import todoImg from '../assets/aincore.png'
 import guldasta from '../assets/guldasta.png'
 import orbit from '../assets/orbit.jpg'
+import idsImg from '../assets/idseurope.png'
+import hms from '../assets/hms1.png'
+import noxviraImg from '../assets/noxvira.png'
 const ProjectCard = ({ title, description, image, tags, liveLink, githubLink }) => {
   return (
     <motion.div
@@ -87,27 +90,27 @@ const MyProjects = () => {
       githubLink: "#"
     },
     {
-      title: "Ecommerce Website for Shoping",
-      description: "Full-featured online store with cart, payment processing, and admin dashboard",
-      image: "https://static.vecteezy.com/system/resources/previews/006/547/178/non_2x/creative-modern-abstract-ecommerce-logo-design-colorful-gradient-online-shopping-bag-logo-design-template-free-vector.jpg",
-      tags: ["React", "Express", "MongoDB", "Stripe"],
-      liveLink: "/project-detail/ecommerce",
+      title: "IDS Europe",
+      description: "Modern hotel and property booking platform with AI travel assistance, smart search, and immersive 3D/AR experiences.",
+      image: idsImg,
+      tags: ["Next Js", "Flutter", "NestJS", "Fastify", "MySQL", "PostgreSQL", "Clerk", "3D Models", "AI Travel Assistant"],
+      liveLink: "https://idseurope.com/landing",
       githubLink: "#"
     },
     {
       title: "Hospital Management System",
       description: "Comprehensive solution for patient records, appointments, and inventory management",
-      image: "https://img.freepik.com/free-vector/hospital-logo-green-blue_1043-66.jpg",
-      tags: ["React", "Express", "MongoDB", "JWT Auth"],
-      liveLink: "/project-detail/hospital",
+      image: hms,
+      tags: ["React", "Express", "MongoDB", "Flutter", "JWT Auth"],
+      liveLink: "#",
       githubLink: "#"
     },
     {
-      title: "Portfolio Website",
-      description: "Modern developer portfolio with project showcase and contact form",
-      image: "https://mir-s3-cdn-cf.behance.net/projects/404/49f28e189617081.Y3JvcCwxMDA2LDc4NywxOTYsMA.jpg",
-      tags: ["React", "Tailwind CSS", "Framer Motion"],
-      liveLink: "#home",
+      title: "Noxvira",
+      description: "Modern digital agency website showcasing services, projects, and AI-powered solutions",
+      tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Sanity", "Google Analytics"],
+      image: noxviraImg,
+      liveLink: "https://noxvira.com/",
       githubLink: "#"
     },
   ];
